@@ -1,0 +1,25 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px
+}
+
+.contact-form {
+    font-size: 14px;
+    outline: #000;
+    font-weight: 600;
+    color: #3e683e;
+    padding: 12px 12px;
+    width: 760px;
+    border: 1px solid #3f3f3f;
+    margin: 5px;
+    border-radius: 20px;
+    background: #3e683e;
+    box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.contact-form input[type="text"] {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #3f3f3f;
+    border-radius: 7px;
+}
