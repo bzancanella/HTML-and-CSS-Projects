@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>All About The Garden</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="js/one_page_website.js" defer></script>
 	</head>
 	
 	<body>
@@ -35,72 +36,104 @@
 		</div>
 		<!-- End of Home -->
 		
-		<!-- Gallery -->
-		<div id="gallery">
-			<h1>Gallery</h1>
-		
-			<!-- Photo 1 -->
-			<div>
-				<img src="./images/thumb/thumb01.jpg" alt="">
-				<div>
-					<h4>Tomatoes on the vine</h4>
-					<p></p>
-				</div>
+		<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="column">
+				<img src="./images/thumb/thumb01.jpg" onclick="openModal();currentSlide(1)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 1 -->
-			
-			<!-- Photo 2 -->
-			<div>
-				<img src="./images/thumb/thumb02.jpg" alt="">
-				<div>
-					<h4>Harvesting tomatoes</h4>
-					<p></p>
-				</div>
+			<div class="column">
+				<img src="./images/thumb/thumb02.jpg" onclick="openModal();currentSlide(2)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 2 -->
-			
-			<!-- Photo 3 -->
-			<div>
-				<img src="./images/thumb/thumb03.jpg" alt="">
-				<div>
-					<h4>Enjoy the assortment!</h4>
-					<p></p>
-				</div>
+			<div class="column">
+				<img src="./images/thumb/thumb03.jpg" onclick="openModal();currentSlide(3)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 3 -->
-			
-			<!-- Photo 4 -->
-			<div>
-				<img src="./images/thumb/thumb04.jpg" alt="">
-				<div>
-					<h4>Peppers plants in the garden</h4>
-					<p></p>
-				</div>
+			<div class="column">
+				<img src="./images/thumb/thumb04.jpg" onclick="openModal();currentSlide(4)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 4 -->
-			
-			<!-- Photo 5 -->
-			<div>
-				<img src="./images/thumb/thumb05.jpg" alt="">
-				<div>
-					<h4>Harvest time</h4>
-					<p></p>
-				</div>
+			<div class="column">
+				<img src="./images/thumb/thumb05.jpg" onclick="openModal();currentSlide(5)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 5 -->
-			
-			<!-- Photo 6 -->
-			<div>
-				<img src="./images/thumb/thumb06.jpg" alt="">
-				<div>
-					<h4>Bringing your peppers into your kitchen!</h4>
-					<p></p>
-				</div>
+			<div class="column">
+				<img src="./images/thumb/thumb06.jpg" onclick="openModal();currentSlide(6)" 
+				class="hover-shadow">
 			</div>
-			<!-- End of Photo 6 -->
-			
 		</div>
-		<!-- End of Gallery -->
+
+		<!-- Modal / Lightbox -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 6</div>
+					<img src="./images/thumb/thumb01.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 6</div>
+					<img src="./images/thumb/thumb02.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 6</div>
+					<img src="./images/thumb/thumb03.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 6</div>
+					<img src="./images/thumb/thumb04.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 6</div>
+					<img src="./images/thumb/thumb05.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 6</div>
+					<img src="./images/thumb/thumb06.jpg" style="width:100%">
+				</div>
+
+				<!-- Next / Previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb01.jpg" onclick="currentSlide(1)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb02.jpg" onclick="currentSlide(2)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb03.jpg" onclick="currentSlide(3)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb04.jpg" onclick="currentSlide(4)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb05.jpg" onclick="currentSlide(5)" alt="">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumb/thumb06.jpg" onclick="currentSlide(6)" alt="">
+				</div>
+			</div>
+		</div>
 		
 		<!-- Videos -->
 		<section>
